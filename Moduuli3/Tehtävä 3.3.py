@@ -1,4 +1,4 @@
-gender = input("Oletko mies vai nainen?: ").strip().upper()
+gender = input("Oletko mies vai nainen?: ").upper()
 
 if gender == "MIES":
     normal_min = 134
