@@ -10,11 +10,7 @@ else:
     print("Virhe: Kirjoita mies tai nainen.")
     exit()
 
-try:
-    hemoglobin = float(input("Anna hemoglobiiniarvosi (g/l): "))
-except ValueError:
-    print("Virheellinen hemoglobiini arvo. Anna arvo numeroina (g/l).")
-    exit()
+hemoglobin = float(input("Anna hemoglobiiniarvosi (g/l): "))
 
 if hemoglobin < normal_min:
     condition = "alhainen"
