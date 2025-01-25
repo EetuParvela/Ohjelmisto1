@@ -1,19 +1,22 @@
 import random
 
-i=0
-n=0
+points_inside_circle=0
 
-N = input("Kuinka monta satunnaista pistettä laitetaan: ")
+while True:
+    try:
+        random_points = int(input("Kuinka monta satunnaista pistettä kokeillaan: "))
+        break
+    except ValueError:
+        print("Anna vastaus numeroina.")
 
-while i < int(N):
+i = 0
+while i <= random_points:
     x_coordinate = random.random()
     y_coordinate = random.random()
     if (x_coordinate ** 2 + y_coordinate ** 2) < 1:
-        n += 1
-    else:
-        pass
+        points_inside_circle += 1
     i += 1
 
-pi = 4*n/int(N)
+pi = 4*points_inside_circle/int(random_points)
 
-print(f"Piin likiarvo {N} pisteellä on {pi}.")
+print(f"Piin likiarvo {random_points} pisteellä on {pi}.")

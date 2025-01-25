@@ -5,4 +5,4 @@ while luku > 0:
     print(f"{luku} on senttimetreinä {sentit}")
     luku = float(input("Anna luku tuumina: "))
 else:
-    print("Näkemiiin")
+    print("Näkemiin.")

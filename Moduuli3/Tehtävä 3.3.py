@@ -1,22 +1,25 @@
-gender = input("Oletko mies vai nainen?: ").upper()
+gender = input("Oletko mies vai nainen?: ").lower()
 
-if gender == "MIES":
-    normal_min = 134
-    normal_max = 195
-elif gender == "NAINEN":
-    normal_min = 117
-    normal_max = 175
+while True:
+    try:
+        hemoglobin = float(input("Anna hemoglobiiniarvosi (g/l): "))
+        break
+    except ValueError:
+        print("Virhe. Anna hemoglobiiniarvo numeroina.")
+
+if gender == "nainen":
+    if hemoglobin < 117:
+        print("Hemoglobiiniarvosi on alhainen.")
+    elif 117 <= hemoglobin <= 175:
+        print("Hemoglobiiniarvosi on normaali.")
+    else:
+        print("Hemoglobiiniarvosi on korkea.")
+elif gender == "mies":
+    if hemoglobin < 134:
+        print("Hemoglobiiniarvosi on alhainen.")
+    elif 134 <= hemoglobin <= 195:
+        print("Hemoglobiiniarvosi on normaali.")
+    else:
+        print("Hemoglobiiniarvosi on korkea.")
 else:
-    print("Virhe: Kirjoita mies tai nainen.")
-    exit()
-
-hemoglobin = float(input("Anna hemoglobiiniarvosi (g/l): "))
-
-if hemoglobin < normal_min:
-    condition = "alhainen"
-elif normal_min <= hemoglobin <= normal_max:
-    condition = "normaali"
-else:
-    condition = "korkea"
-
-print(f"Sinulla on {condition} hemoglobiiniarvo.")
+    print("Virhe. Kirjoita mies tai nainen.")
