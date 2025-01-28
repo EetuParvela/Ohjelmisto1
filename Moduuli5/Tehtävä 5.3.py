@@ -1,5 +1,3 @@
-is_prime = True
-
 while True:
     try:
         number = int(input("Anna kokonaisluku: "))
@@ -12,7 +10,6 @@ if number <= 2:
 else:
     for num in range(2, int(number ** 0.5) + 1):
         if number % num == 0:
-            is_prime = False
             print(f"{number} ei ole alkuluku.")
             break
     else:
