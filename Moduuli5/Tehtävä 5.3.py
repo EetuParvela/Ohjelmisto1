@@ -5,7 +5,7 @@ while True:
     except ValueError:
         print("Kirjoita kokonaisluku.")
 
-if number <= 2:
+if number <= 1:
     print(f"{number} ei ole alkuluku.")
 else:
     for num in range(2, int(number ** 0.5) + 1):
